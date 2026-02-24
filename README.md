@@ -106,13 +106,6 @@ skill-swap/
 
 ## Contributors
 
- **<Sanjana S Aithal>**
- [[sanjanaaithal28@gmail.com](mailto:sanjanaaithal28@gmail.com)]
- [https://www.linkedin.com/in/sanjana-s-aithal-7aaa59337/]
-
- **<Sameeksha P Kumar>**
- [[sameekshakumar03@gmail.com](mailto:sameekshakumar03@gmail.com)]
-
  **<Sejal Siddapuram>**
  [[sejal.siddapuram@gmail.com](mailto:sejal.siddapuram@gmail.com)]
 
