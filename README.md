@@ -28,6 +28,29 @@ Users can register, showcase their skills, find others to collaborate or learn f
 
 ---
 
+## How Skill Swap Works
+
+Skill Swap is built around a **token-based learning economy** that ensures fair exchange of knowledge.
+
+###  Token System
+- Every new user starts with **10 tokens**
+- Tokens act as the platform’s internal currency
+
+###  Earning Tokens
+- When other users **learn a skill from you**
+- When you **successfully complete a teaching session**
+- Tokens reward users who contribute knowledge to the community
+
+###  Spending Tokens
+- When you **request to learn a skill from someone else**
+- Each learning session costs tokens
+- This prevents free-riding and encourages balanced participation
+
+###  Why Tokens Matter
+- Encourages users to **teach as well as learn**
+- Creates a self-sustaining knowledge exchange system
+- Ensures fairness without real money transactions
+
 ## Installation and Setup
 
 Follow these steps to run the project locally 👇
