@@ -1,0 +1,118 @@
+.login-container {
+  min-height: 100vh;/* minimum viewport height , makes an element at least
+   as tall as the browser window.*/
+  width: 100vw; /*viewport width*/
+  display: flex;/*centres its content*/
+  align-items: center;
+  justify-content: center;
+  background-color: #9DBEBB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.login-box {
+  background-color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+  width: 420px; /* Fixed width */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.login-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #035484;
+  margin-bottom: 0.5rem;
+}
+
+.login-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-weight: normal;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: block;/*It starts on a new line and stretches
+   across the full width unless you give it a specific width.*/
+  font-size: 1rem;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.8rem 2.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #F4E9CD;
+  transition: background-color 0.3s;
+  box-sizing: border-box; /* prevents padding from increasing total width. */
+}
+
+.input-field:not(:placeholder-shown) { /*Input turns greenish when filled*/
+  background-color: #77ACA2;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: white;
+  background-color: #022f49;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.login-button:hover {
+  opacity: 0.9;
+}
+
+.register-text {
+  margin-top: 1.25rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #468189;
+  font-weight: 500;
+}
+
+.error-message {
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.register-link {
+  color: #468189;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 0.25rem;
+  transition: opacity 0.3s;
+}
+
+.register-link:hover {
+  opacity: 0.8;
+}

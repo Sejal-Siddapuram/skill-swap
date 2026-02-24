@@ -1,0 +1,515 @@
+/* --- Color Palette Variables --- */
+:root {
+  --bg-color: #9DBEBB;
+  --card-bg-color: #FFFFFF;
+  --primary-text: #031926;
+  --secondary-text: #468189;
+  --accent-color: #77ACA2;
+  --accent-light: #F0F5F4; /* A lighter version of accent for tags */
+  --input-bg: #F4E9CD;
+  --button-bg: #031926;
+  --button-text: #FFFFFF;
+  --border-color: #E5E7EB; /* A light border color */
+}
+
+/* --- General Page Styling --- */
+.profile-page-container {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: var(--bg-color);
+  padding: 2rem;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--primary-text);
+  margin: 0;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.profile-page-content {
+  max-width: 64rem; /* 1024px */
+  margin: 0 auto;
+}
+
+/* --- Header --- */
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  gap: 2rem;
+}
+
+.profile-page-container .header-title {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.profile-page-container .header-title h1 {/*Makes “My Profile” large + bold.*/
+  font-size: 2rem;
+  font-weight: 600;
+  color: #022f49 !important;
+  margin: 0;
+}
+
+.profile-page-container .header-title p {
+  font-size: 1rem;
+  color: var(--secondary-text);
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.header-btn, .credit-balance-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.profile-page-container .credit-balance-btn {
+  background-color: #022f49 !important;
+  color: #FFFFFF !important;
+  cursor: default !important;
+}
+
+.profile-page-container .credit-balance-btn .credit-amount {
+  color: #FFFFFF !important;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-left: 0.25rem;
+}
+
+.profile-page-container .header-btn {
+  background-color: var(--card-bg-color) !important;
+  color: #022f49 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.header-btn:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+/* --- General Card Styling --- */
+.profile-card {
+  background-color: var(--card-bg-color);
+  border-radius: 12px;
+  padding: 1.5rem 2.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.profile-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-card-header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.edit-btn, .add-skill-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--secondary-text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.edit-btn:hover, .add-skill-btn:hover {
+  background-color: #f9f9f9;
+  border-color: var(--secondary-text);
+}
+
+/* --- Edit Actions --- */
+.edit-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.save-btn, .cancel-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.save-btn {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border-color: var(--button-bg);
+}
+
+.save-btn:hover {
+  background-color: #1a1a1a;
+}
+
+.cancel-btn {
+  background-color: var(--card-bg-color);
+  color: var(--secondary-text);
+}
+
+.cancel-btn:hover {
+  background-color: #f9f9f9;
+  border-color: var(--secondary-text);
+}
+
+/* --- Edit Inputs --- */
+.edit-input, .edit-textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--card-bg-color);
+  color: var(--primary-text);
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.edit-input:focus, .edit-textarea:focus {
+  outline: none;
+  border-color: var(--button-bg);
+}
+
+.edit-textarea {
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+}
+
+/* --- Profile Info Card --- */
+.profile-info-content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #022f49;
+  color: var(--button-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.profile-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2rem; /* row-gap column-gap */
+}
+
+.detail-item label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--secondary-text);
+  margin-bottom: 0.25rem;
+}
+
+.detail-item p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.detail-item.full-span {
+  grid-column: 1 / -1;
+}
+
+/* --- Skills Cards --- */
+.skills-card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--primary-text);
+}
+
+.skills-list {/*Fill the row automatically with as many columns as possible.
+Each column must be at least 300px, and can grow to 1fr (share space).*/
+/*So if your screen is wide:
+You get 3 cards in a row
+If narrower:
+You get 2 rows
+On mobile:
+You get 1 card per row
+This is how your “Skills I Can Teach” section becomes responsive.*/
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-item-teach {/*White-bordered boxes for teaching skills.*/
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+}
+
+.skill-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.skill-item-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.skill-item-close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--secondary-text);
+  padding: 0.25rem;
+}
+
+.skill-item-details {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.skill-tag {/*Small rounded boxes showing:
+Beginner / Intermediate / Credits/hr etc.*/
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  background-color: var(--accent-light);
+  color: var(--accent-color);
+}
+
+.skill-tag.credits {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.skill-description {
+  font-size: 0.9rem;
+  color: var(--secondary-text);
+  margin: 0;
+}
+
+.skills-list-learn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skill-tag-learn {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  background-color: #f3f4f6;
+  color: var(--primary-text);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skill-tag-close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--secondary-text);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skill-tag-close-btn:hover {
+  color: var(--primary-text);
+}
+
+/* --- Modal Styling --- */
+.modal-overlay { /*Dark background covering full screen and Centers the popup
+  (for skills to teach)*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 25, 38, 0.6); /* Use primary text with alpha */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.modal-content {
+  background: var(--card-bg-color);
+  border-radius: 12px;
+  padding: 2rem;
+  width: 500px;
+  max-width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.modal-subtitle {
+  font-size: 1rem;
+  color: var(--secondary-text);
+  margin-top: 0.25rem;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--secondary-text);
+  padding: 0.25rem;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-text);
+  margin-bottom: 0.5rem;
+}
+
+.modal-input, .modal-select, .modal-textarea {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  box-sizing: border-box;
+  color: var(--primary-text);
+}
+
+.modal-select {
+  appearance: none;/*removes browser provided default arrow*/
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23468189' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");/*svg for drop down arrow*/
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 1.2em 1.2em;
+  padding-right: 2.5rem;
+}
+
+.modal-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-helper-text {/*“Typically 1 credit, but experts can charge
+   2–3 credits”(lighter color and smaller font)*/
+  font-size: 0.85rem;
+  color: var(--secondary-text);
+  margin-top: 0.5rem;
+}
+
+.modal-actions {/*Aligns Cancel + Add button to the right*/
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.modal-btn-cancel, .modal-btn-submit {
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.modal-btn-cancel {
+  background-color: #f3f4f6;
+  color: var(--primary-text);
+}
+
+.modal-btn-submit {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+}
+
+.modal-btn-cancel:hover, .modal-btn-submit:hover {
+  opacity: 0.9;
+}

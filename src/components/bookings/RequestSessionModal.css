@@ -1,0 +1,158 @@
+.request-session-modal {
+  width: 600px;
+  max-width: 90vw;
+}
+
+.modal-content {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 2rem;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #031926;
+}
+
+.modal-subtitle {
+  font-size: 1rem;
+  color: #468189;
+  margin-top: 0.25rem;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #468189;
+  padding: 0.25rem;
+}
+
+.modal-close-btn:hover {
+  color: #031926;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #031926;
+  margin-bottom: 0.5rem;
+}
+
+.modal-input, .modal-select, .modal-textarea {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 2px solid #E5E7EB;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  color: #031926;
+  box-sizing: border-box;
+}
+
+.modal-input:focus, .modal-select:focus, .modal-textarea:focus {
+  outline: none;
+  border-color: #031926;
+}
+
+.modal-input:disabled {
+  background-color: #F4E9CD;
+  color: #031926;
+}
+
+.modal-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23468189' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 1.2em 1.2em;
+  padding-right: 2.5rem;
+}
+
+.modal-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.modal-btn-cancel, .modal-btn-submit {
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.modal-btn-cancel {
+  background-color: #f3f4f6;
+  color: #031926;
+}
+
+.modal-btn-submit {
+  background-color: #031926;
+  color: #FFFFFF;
+}
+
+.modal-btn-cancel:hover, .modal-btn-submit:hover {
+  opacity: 0.9;
+}
+
+.credit-summary {
+  background-color: #F0F5F4;
+  border-radius: 8px;
+  padding: 1rem;
+  border: 1px solid #E5E7EB;
+}
+
+.credit-summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.credit-summary-row.total {
+  border-top: 2px solid #E5E7EB;
+  padding-top: 0.75rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.credit-amount {
+  color: #022f49;
+  font-weight: 600;
+}
+
